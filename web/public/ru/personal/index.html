@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Личный кабинет</title>
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../css/personal.css" rel="stylesheet">
+    <script src="../../js/jquery-3.5.0.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script>let language = 'ru';</script>
+    <script src="../../js/personal.js"></script>
+</head>
+<body>
+<div class="main">
+    <div class = "control-block">
+        <button type="button" class="btn btn-default change-language-button" onclick="location.href = location.origin+'/en/personal'">English version</button>
+        <button type="button" class="btn btn-default logout-button" onclick="logout();">Выход</button>
+    </div>
+    <div class="center-block lead-block">
+        <p class="lead">Информация об аккаунте</p>
+    </div>
+    <div class="center-block info-block">
+        <div class="textinfo-block">
+            <h3>Login: <small id="login"></small></h3>
+            <h3>Email: <small id="email"></small></h3>
+            <h3>Телефон: <small id="phone"></small></h3>
+            <h3>Имя: <small id="firstName"></small></h3>
+            <h3>Отчество: <small id="secondName"></small></h3>
+            <h3>Фамилия: <small id="lastName"></small></h3>
+        </div>
+        <div class="image-block">
+            <img class="img-userpic" src="../../files/nophoto.jpg">
+        </div>
+    </div>
+</div>
+</body>
+</html>

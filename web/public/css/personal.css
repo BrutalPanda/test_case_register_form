@@ -1,0 +1,48 @@
+body {
+    background-color: #f7f7f9;
+}
+
+.control-block {
+    text-align: right;
+}
+
+.logout-button {
+    margin-right: 2%;
+}
+
+.lead-block {
+    margin-top: 8%;
+    text-align: center;
+}
+
+.info-block {
+    display: none;
+    width: 40%;
+    height: 295px;
+    padding: 7px;
+    background-color: white;
+    border: 1px solid #e1e1e8;
+    border-radius: 10px;
+}
+
+.img-userpic {
+    width: 90%;
+    height: 90%;
+}
+
+.textinfo-block {
+    width: 48%;
+    float: left;
+    margin-left: 5px;
+}
+
+.image-block {
+    width: 48%;
+    float: right;
+    margin-top: 25px;
+}
+
+.img-userpic {
+    border: 1px solid #e1e1e8;
+    border-radius: 10px;
+}

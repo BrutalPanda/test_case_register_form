@@ -1,0 +1,63 @@
+body {
+    background-color: #f7f7f9;
+}
+.change-language-button {
+    margin-right: 2%;
+}
+
+.change-language-block {
+    text-align: right;
+    margin-left: 5%;
+}
+
+.lead-block {
+    text-align: center;
+}
+
+.form-block {
+    width: 40%;
+}
+
+.tab-content {
+    width: 95%;
+    padding: 7px;
+    background-color: white;
+    border: 1px solid #e1e1e8;
+    border-radius: 10px;
+}
+
+.form-group {
+    padding: 5px;
+}
+
+.btn-submit {
+    margin-left: 5px;
+    margin-bottom: 10px;
+}
+
+.btn-register {
+    margin-top: -13%;
+}
+
+.error {
+    margin-left: 15px;
+    color: #a94442;
+}
+
+.message {
+    margin-left: 35%;
+}
+
+.nav-pills {
+    margin-bottom: 10px;
+}
+
+#registrationTab {
+    overflow: auto;
+    height: 500px;
+    padding: 10px;
+}
+
+#inputFile {
+    display: none;
+}

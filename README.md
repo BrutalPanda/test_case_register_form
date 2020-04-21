@@ -1,2 +1,7 @@
-# test_case_register_form
-Test case register form
+# тестовое задание: форма регистрации
+
+Для запуска убедитесь, что устанвлен docker и docker-compose
+
+В корне приложения выполните команду:
+
+```docker-compose up --build```

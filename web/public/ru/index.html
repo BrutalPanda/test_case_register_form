@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Test case</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/main.css" rel="stylesheet">
+    <script src="../js/jquery-3.5.0.min.js"></script>
+    <script src="../js/jquery.mask.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script>let language = 'ru';</script>
+    <script src="../js/main.js"></script>
+</head>
+<body>
+<div class="main">
+    <div class = "change-language-block">
+        <button type="button" class="btn btn-default change-language-button" onclick="location.href = location.origin+'/en'">English version</button>
+    </div>
+    <div class="center-block lead-block">
+        <p class="lead">Для продолжения работы с сайтом выполните вход или зарегистрируйтесь</p>
+    </div>
+    <div class="center-block form-block">
+        <ul class="nav nav-pills">
+            <li class="active"><a data-toggle="pill" href="#loginTab">Вход</a></li>
+            <li><a data-toggle="pill" href="#registrationTab">Регистрация</a></li>
+        </ul>
+
+        <div class="tab-content">
+            <div id="loginTab" class="tab-pane fade in active">
+                <form action="" id="loginForm">
+                    <div class="form-group">
+                        <label for="inputEmailOrLogin">Email/Login</label>
+                        <input type="email" class="form-control" id="inputEmailOrLogin" placeholder="user@domain.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPassword">Пароль</label>
+                        <input type="password" class="form-control" id="inputPassword" placeholder="Пароль">
+                    </div>
+                    <p class="error" id="errorMessageWrongLoginPass" style="display: none;">Неверный логин или пароль</p>
+                    <button type="submit" class="btn btn-default btn-submit">Войти</button>
+                </form>
+            </div>
+            <div id="registrationTab" class="tab-pane fade">
+                <form action="" id="registerForm">
+                    <div class="form-group">
+                        <label for="inputRegEmail">Email*</label>
+                        <input type="text" class="form-control" id="inputRegEmail" name="inputRegEmail" placeholder="user@domain.com">
+                        <p class="error" id="errorMessageWrongEmail" style="display: none;">Адрес электронной почты должен соответствовать формату: user@domain.com</p>
+                        <p class="error" id="errorMessageEmptyEmail" style="display: none;">Поле обязательно для заполнения</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputRegLogin">Login*</label>
+                        <input type="text"  class="form-control" id="inputRegLogin" name="inputRegLogin" placeholder="Login">
+                        <p class="error" id="errorMessageWrongLogin" style="display: none;">Login может содержать латинские символы, цифры и символ "_", а так же быть от 3 до 20 знаков</p>
+                        <p class="error" id="errorMessageEmptyLogin" style="display: none;">Поле обязательно для заполнения</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputRegPass">Пароль*</label>
+                        <input type="password" class="form-control" id="inputRegPass" name="inputRegPass" placeholder="Пароль">
+                        <p class="error" id="errorMessageWrongPass" style="display: none;">Пароль должен быть от 6 до 30 знаков</p>
+                        <p class="error" id="errorMessageEmptyPass" style="display: none;">Поле обязательно для заполнения</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputRegPassConfirm">Подтвердите пароль*</label>
+                        <input type="password" class="form-control" id="inputRegPassConfirm" name="inputRegPassConfirm" placeholder="Подтвердите пароль">
+                        <p class="error" id="errorMessageWrongPassConf" style="display: none;">Пароли не совпадают</p>
+                        <p class="error" id="errorMessageEmptyPassConf" style="display: none;">Поле обязательно для заполнения</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputRegPhone">Телефон*</label>
+                        <input type="text" class="form-control" id="inputRegPhone" name="inputRegPhone" placeholder="8 (900) 000-0000">
+                        <p class="error" id="errorMessageWrongPhone" style="display: none;">Телефон должен содержать только цифры</p>
+                        <p class="error" id="errorMessageEmptyPhone" style="display: none;">Поле обязательно для заполнения</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputRegFirstName">Имя*</label>
+                        <input type="text" class="form-control" id="inputRegFirstName" name="inputRegFirstName" placeholder="Имя">
+                        <p class="error" id="errorMessageWrongName" style="display: none;">Имя должно содержать только буквы</p>
+                        <p class="error" id="errorMessageEmptyName" style="display: none;">Поле обязательно для заполнения</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputRegLastName">Фамилия</label>
+                        <input type="text" class="form-control" id="inputRegLastName" name="inputRegLastName" placeholder="Фамилия">
+                        <p class="error" id="errorMessageWrongLastName" style="display: none;">Фамилия должна содержать только буквы</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputRegSecondName">Отчество</label>
+                        <input type="text" class="form-control" id="inputRegSecondName" name="inputRegSecondName" placeholder="Отчество">
+                        <p class="error" id="errorMessageWrongSecondName" style="display: none;">Отчество должно содержать только буквы</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputFile">Выберите изображение для профиля</label>
+                        <div class="example-2">
+                            <div class="form-group">
+                                <input type="file" name="inputFile" id="inputFile" class="input-file">
+                                <label for="inputFile" class="btn btn-default">
+                                    <span id="fileName">Загрузить файл</span>
+                                </label>
+                            </div>
+                        </div>
+                        <p class="help-block">Максимальный размер файла: 5 Мб</p>
+                        <p class="help-block">Разрешенные форматы: jpg, gif, png</p>
+                        <p class="error" id="errorMessageWrongFile" style="display: none;">Файл не должен быть больше 5 Мб</p>
+                        <p class="error" id="errorMessageWrongFileExt" style="display: none;">Файл должен быть изображением форматов: jpg, gif. png</p>
+                        <p class="error" id="errorMessageWrongFileNotLoaded" style="display: none;">Не удалось загрузить файл</p>
+                    </div>
+                    <div class = "form-group" style="text-align: end; display: inline;">
+                        <p class="message">Поля отмеченные * обязательны для заполнения</p>
+                        <button type="submit" class="btn btn-default btn-submit btn-register">Регистрация</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modalWindow" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="modalLabel"></h4>
+                </div>
+                <div class="modal-body">
+                    <p id="modalText"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
